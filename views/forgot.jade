@@ -1,0 +1,18 @@
+html
+  head
+    style
+      include ../public/stylesheets/regform.css
+body
+  div#contact-area 
+    div#errors-area
+      if success
+        div#success= success
+      if errors
+        for error in errors
+            li#errors= error.msg
+    form#reg-form(method='post',action='')
+      div
+        label(for='name') Email:
+        input(type='text',name='email',id='email', value= email)  
+      div#submit     
+        input(type='submit')

@@ -1,0 +1,52 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: rgb(46, 46, 46);
+  color: white;
+}
+
+#contact-area {
+  display: block;
+  width: 40vh;
+  height: 50vh;
+  margin: auto;
+  padding: 5vh;
+}
+
+#reg-form div {
+  text-align: center;
+  margin-bottom: 5vh;
+}
+
+#reg-form input {
+  background-color: black;
+  color: white;
+  border-style: none;
+  border-radius: 5vh;
+  padding: 1vh;
+  margin: auto;
+}
+
+#errors-area {
+  height: 15vh;
+}
+
+#errors {
+  color: red;
+  background-color: rgb(250, 115, 121);
+  padding: 1vh;
+  margin: 2vh 2vh 2vh 0;
+  border-radius: 5px;
+}
+
+#success {
+  color: green;
+  background-color: greenyellow;
+  padding: 1vh;
+  margin: 2vh 2vh 2vh 0;
+  border-radius: 5px;
+}
+
+#submit {
+  text-align: center;
+}
