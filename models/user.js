@@ -14,15 +14,20 @@ const UserSchema = new mongoose.Schema({
 });
 
 UserSchema.pre('save', function (next) {
-  var user = this;
-  var hash = crypto.createHash('sha256').update(user.email).digest('hex');
+  let user = this;
+  let hash = crypto
+    .createHash('sha256')
+    .update(user.email.toLowerCase())
+    .digest('hex');
   user.email = hash;
-  console.log(user);
   next();
 });
 
 UserSchema.static('findEmail', async function (newUser) {
-  var hash = crypto.createHash('sha256').update(newUser).digest('hex');
+  let hash = crypto
+    .createHash('sha256')
+    .update(newUser.toLowerCase())
+    .digest('hex');
   return mongoose.model('User').findOne({ email: hash }).exec();
 });
 
